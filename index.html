@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Berserk Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style> 
+
+  /* Existing styles stay unchanged above this line */
+
+  @media screen and (max-width: 768px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header .header-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    main, aside {
+      max-height: none;
+      width: 100%;
+    }
+
+    main {
+      box-shadow: none;
+    }
+
+    section {
+      font-size: 0.9rem;
+    }
+
+    nav li {
+      font-size: 1.1rem;
+    }
+
+    h2, h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'UnifrakturCook', serif;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "nav nav"
+        "header header"
+        "main aside"
+        "footer footer";
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      min-height: 100vh;
+      gap: 15px;
+      padding: 20px;
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+      color: #f8f8f8;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #111;
+      padding: 20px;
+      border-bottom: 2px solid crimson;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav li {
+      color: crimson;
+      font-size: 1.3rem;
+      cursor: pointer;
+      position: relative;
+    }
+
+    nav li::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: crimson;
+      transition: width 0.3s;
+      margin-top: 5px;
+    }
+
+    nav li:hover::after {
+      width: 100%;
+    }
+
+    header {
+      grid-area: header;
+      background: #1a1a1a;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px solid crimson;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: crimson;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+      color: #ccc;
+      font-style: italic;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    header .header-links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header .header-links a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    header .header-links a:hover {
+      border-bottom: 1px solid gold;
+    }
+
+    main {
+      grid-area: main;
+      background: #121212;
+      padding: 20px;
+      overflow-y: auto;
+      border: 2px solid crimson;
+      box-shadow: 0 0 10px crimson;
+      max-height: 80vh;
+    }
+
+    aside {
+      grid-area: aside;
+      background: #1f1f1f;
+      padding: 20px;
+      border-left: 2px solid crimson;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid crimson;
+      color: #aaa;
+    }
+
+    section {
+      margin-bottom: 20px;
+      border-left: 5px solid crimson;
+      background: #1a1a1a;
+      padding: 15px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    section:hover {
+      background: #222;
+      transform: scale(1.01);
+    }
+
+    h2 {
+      color: #f44;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      color: gold;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    p, li {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    aside ul {
+      list-style: square;
+      color: #bbb;
+      padding-left: 20px;
+    }
+
+    aside li {
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="Berserk1.html">Home</a></li>
+    <li><a href="images.html">Images</a></li> 
+    <li><a href="edition.html">Edition</a></li> 
+    <li><a href="manga.html">Manga</a></li>
+    <li><a href="anime.html">Anime</a></li>
+  </ul>
+</nav> 
+
+  <header>
+    <h1>Berserk</h1>
+    <p>Dark, Brutal, Emotional, Legendary</p>
+    <div class="header-links">
+      <a href="#manga-section">Read Manga</a>
+      <a href="#anime-section">Watch Anime</a>
+    </div>
+  </header>
+
+  <main>
+    <h3>Characters</h3>
+    <section><h2>Guts</h2><p>Born from a corpse, he became the Black Swordsman, wielding the massive Dragonslayer sword, seeking vengeance against Griffith.</p></section>
+    <section><h2>Griffith</h2><p>Leader of the Band of the Hawk, sacrificed comrades to become a demon king named Femto.</p></section>
+    <section><h2>Casca</h2><p>Warrior and Guts' love interest, mentally broken after the Eclipse.</p></section>
+    <section><h2>Skull Knight</h2><p>Mysterious warrior opposing the God Hand with a dimension-slicing sword.</p></section>
+    <section><h2>Luca</h2><p>Kind-hearted prostitute who helped Casca during chaos in Albion.</p></section>
+    <section><h2>Flora</h2><p>Witch and mentor to Schierke, sacrificed to protect others.</p></section>
+    <section><h2>Zodd the Immortal</h2><p>Ancient, bloodthirsty demon warrior who respects only strength.</p></section>
+
+    <h3 id="manga-section">Manga</h3>
+    <section>
+      <h2>Berserk (Manga Series)</h2>
+      <p>Author: Kentaro Miura<br>
+      Released: 1990 - ongoing (posthumous continuation by Studio Gaga)<br>
+      Volumes: 42+<br>
+      Notable Arcs: Black Swordsman, Golden Age, Conviction, Millennium Falcon, Fantasia</p>
+    </section>
+
+    <h3 id="anime-section">Anime</h3>
+    <section>
+      <h2>Berserk (1997)</h2>
+      <p>Studio: OLM<br>
+      Covers: Golden Age arc<br>
+      Episodes: 25<br>
+      Style: Dark, mature, psychological
+      </p>
+    </section>
+    <section>
+      <h2>Berserk: The Golden Age Arc (Movie Trilogy)</h2>
+      <p>Studio: Studio 4°C<br>
+      Released: 2012-2013<br>
+      1. The Egg of the King<br>
+      2. The Battle for Doldrey<br>
+      3. The Advent</p>
+    </section>
+    <section>
+      <h2>Berserk (2016 & 2017 TV Series)</h2>
+      <p>Studio: GEMBA/Millepensee<br>
+      Episodes: 24 total<br>
+      Animation: CGI hybrid, covers Conviction and Falcon arcs.</p>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Description</h3>
+    <ul>
+      <li>Berserk is a dark fantasy anime and manga series following Guts, a mercenary navigating a world of demons and betrayal.</li>
+      <li>Created by Kentaro Miura, the manga began in 1990 and became a cult classic due to its deep themes and brutal storytelling.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; Berserk Universe - Tribute to Kentaro Miura</p>
+  </footer>
+</body>
+</html>
