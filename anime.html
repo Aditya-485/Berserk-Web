@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Berserk Anime</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #f0f0f0;
+      font-family: sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 30px;
+      background: #1a1a1a;
+      color: crimson;
+      border: 2px solid crimson;
+    }
+    .playlist {
+      display: none;
+    }
+    .playlist.active {
+      display: block;
+    }
+    iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 340px;
+      margin: 20px 0;
+      border-radius: 10px;
+      border: 2px solid crimson;
+      box-shadow: 0 0 10px crimson;
+    }
+    h3 {
+      color: crimson;
+    }
+  </style>
+  <script>
+    function switchPlaylist(value) {
+      const lists = document.querySelectorAll('.playlist');
+      lists.forEach(p => p.classList.remove('active'));
+      document.getElementById(value).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <h1>Watch Berserk Anime</h1>
+  <select onchange="switchPlaylist(this.value)">
+    <option value="berserk97">Berserk (1997)</option>
+    <option value="goldenAge">Golden Age Arc Movies</option>
+    <option value="berserk2016">Berserk (2016/2017)</option>
+  </select>
+
+  <!-- Berserk 1997 Playlist -->
+  <div class="playlist active" id="berserk97">
+    <h3>Berserk (1997) Episodes</h3>
+    <iframe src="https://hianime.to/embed/g6n3/1" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://hianime.to/embed/g6n3/2" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://hianime.to/embed/g6n3/3" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Golden Age Arc Movies -->
+  <div class="playlist" id="goldenAge">
+    <h3>Golden Age Arc Movies</h3>
+    <iframe src="https://hianime.to/embed/3qk5/1" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://hianime.to/embed/3qk5/2" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://hianime.to/embed/3qk5/3" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Berserk 2016 Playlist -->
+  <div class="playlist" id="berserk2016">
+    <h3>Berserk (2016) Episodes</h3>
+    <iframe src="https://hianime.to/embed/k90m/1" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://hianime.to/embed/k90m/2" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://hianime.to/embed/k90m/3" frameborder="0" allowfullscreen></iframe>
+  </div>
+</body>
+</html>

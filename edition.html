@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Berserk Editions</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .editions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 2px solid crimson;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 250px;
+      height: 350px;
+      position: relative;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px crimson;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .card:hover .info {
+      opacity: 1;
+    }
+
+    .info h3 {
+      color: crimson;
+      margin-bottom: 10px;
+    }
+    .info p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Berserk Editions</h1>
+  <div class="editions">
+    <div class="card">
+      <img src="https://i.scdn.co/image/ab67616d0000b2730f612586947e7cf9461ae71f" alt="Berserk 1997">
+      <div class="info">
+        <h3>Berserk (1997)</h3>
+        <p>Studio: OLM<br>
+        Episodes: 25<br>
+        Aired: Oct 1997 – Mar 1998<br>
+        Rating: 8.4/10 (MyAnimeList)<br>
+        Covers: Golden Age Arc</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlMBSaH6sHJmWHzEYPfC1yFDAjd6Y69-aadw&s" alt="Golden Age Arc Movies">
+      <div class="info">
+        <h3>Golden Age Arc (Movies)</h3>
+        <p>Studio: Studio 4°C<br>
+        Released: 2012–2013<br>
+        Movies: 3<br>
+        Duration: ~70-100 min each<br>
+        Rating: 7.6/10 (Average)</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZdWdJgr0D8PwWaqFQXt_rXdvyhhJlJaAnQ&s" alt="Berserk 2016-17">
+      <div class="info">
+        <h3>Berserk (2016 & 2017)</h3>
+        <p>Studio: GEMBA / Millepensee<br>
+        Episodes: 24 total<br>
+        Aired: Jul 2016 – Jun 2017<br>
+        Rating: 6.1/10 (Mixed reviews)<br>
+        Covers: Conviction & Falcon of the Millennium Empire arcs</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

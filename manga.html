@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Berserk Manga</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #f0f0f0;
+      font-family: sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .chapters {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .chapters button {
+      background: #1a1a1a;
+      color: crimson;
+      border: 2px solid crimson;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .chapters button:hover {
+      background: crimson;
+      color: black;
+    }
+    .pages {
+      display: none;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    .pages.active {
+      display: block;
+    }
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+    }
+    .slider img {
+      width: 100%;
+      max-width: 600px;
+      scroll-snap-align: center;
+      border: 2px solid crimson;
+      border-radius: 10px;
+      box-shadow: 0 0 10px crimson;
+    }
+  </style>
+  <script>
+    function showChapter(id) {
+      const all = document.querySelectorAll('.pages');
+      all.forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <h1>Berserk Manga</h1>
+
+  <div class="chapters">
+    <button onclick="showChapter('ch1')">Chapter 1</button>
+    <button onclick="showChapter('ch2')">Chapter 2</button>
+    <button onclick="showChapter('ch3')">Chapter 3</button>
+    <button onclick="showChapter('ch4')">Chapter 4</button>
+    <button onclick="showChapter('ch5')">Chapter 5</button>
+  </div>
+
+  <div class="pages" id="ch1">
+    <div class="slider">
+      <img src="https://i.imgur.com/9fF1MLx.jpg" alt="Chapter 1 Page 1">
+      <img src="https://i.imgur.com/NKbENlc.jpg" alt="Chapter 1 Page 2">
+      <img src="https://i.imgur.com/W7P9asf.jpg" alt="Chapter 1 Page 3">
+      <img src="https://i.imgur.com/d2lXffp.jpg" alt="Chapter 1 Page 4">
+      <img src="https://i.imgur.com/lPQ7qgC.jpg" alt="Chapter 1 Page 5">
+    </div>
+  </div>
+
+  <div class="pages" id="ch2">
+    <div class="slider">
+      <img src="https://i.imgur.com/OB1AI9e.jpg" alt="Chapter 2 Page 1">
+      <img src="https://i.imgur.com/z5uXpLC.jpg" alt="Chapter 2 Page 2">
+      <img src="https://i.imgur.com/0AUjEjj.jpg" alt="Chapter 2 Page 3">
+      <img src="https://i.imgur.com/RSLw4Ea.jpg" alt="Chapter 2 Page 4">
+      <img src="https://i.imgur.com/cG6kewX.jpg" alt="Chapter 2 Page 5">
+    </div>
+  </div>
+
+  <div class="pages" id="ch3">
+    <div class="slider">
+      <img src="https://i.imgur.com/fEcnmDx.jpg" alt="Chapter 3 Page 1">
+      <img src="https://i.imgur.com/HT9jN4Z.jpg" alt="Chapter 3 Page 2">
+      <img src="https://i.imgur.com/4LD4eVW.jpg" alt="Chapter 3 Page 3">
+      <img src="https://i.imgur.com/YM3zCWZ.jpg" alt="Chapter 3 Page 4">
+      <img src="https://i.imgur.com/Z4HFOpJ.jpg" alt="Chapter 3 Page 5">
+    </div>
+  </div>
+
+  <div class="pages" id="ch4">
+    <div class="slider">
+      <img src="https://i.imgur.com/8KOFDj5.jpg" alt="Chapter 4 Page 1">
+      <img src="https://i.imgur.com/fAh9Eqm.jpg" alt="Chapter 4 Page 2">
+      <img src="https://i.imgur.com/VgTBaUg.jpg" alt="Chapter 4 Page 3">
+      <img src="https://i.imgur.com/BiVD8Zo.jpg" alt="Chapter 4 Page 4">
+      <img src="https://i.imgur.com/D7XasVo.jpg" alt="Chapter 4 Page 5">
+    </div>
+  </div>
+
+  <div class="pages" id="ch5">
+    <div class="slider">
+      <img src="https://i.imgur.com/kLwb2TD.jpg" alt="Chapter 5 Page 1">
+      <img src="https://i.imgur.com/5zrhZsZ.jpg" alt="Chapter 5 Page 2">
+      <img src="https://i.imgur.com/jmC5U7F.jpg" alt="Chapter 5 Page 3">
+      <img src="https://i.imgur.com/H3hHaTO.jpg" alt="Chapter 5 Page 4">
+      <img src="https://i.imgur.com/faztDjH.jpg" alt="Chapter 5 Page 5">
+    </div>
+  </div>
+
+</body>
+</html>
